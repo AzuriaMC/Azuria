@@ -1,0 +1,36 @@
+repositories {
+    maven {
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+    maven {
+        name = 'commons-dbcp2'
+        url = 'https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2'
+    }
+    maven {
+        name = 'jackson-core'
+        url = 'https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core'
+    }
+    maven {
+        name = 'jackson-databind'
+        url = 'https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind'
+    }
+    maven {
+        name = 'jackson-dataformat-yaml'
+        url = 'https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml'
+    }
+}
+
+dependencies {
+    compileOnly 'net.md-5:bungeecord-api:1.15-SNAPSHOT'
+    compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.7.0'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.10.3'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.3'
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.10.3'
+}
+
+processResources {
+    from(sourceSets.main.resources.srcDirs) {
+        expand 'version': project.version
+    }
+}

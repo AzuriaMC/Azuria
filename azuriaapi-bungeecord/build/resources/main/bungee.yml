@@ -1,0 +1,4 @@
+name: AzuriaAPI
+version: 1.0
+main: fr.choukas.azuria.api.AzuriaAPI
+description: Bungee API for Azuria.

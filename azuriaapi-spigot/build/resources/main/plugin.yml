@@ -1,0 +1,6 @@
+name: AzuriaAPI
+version: @version@
+main: fr.choukas.azuria.api.AzuriaAPI
+api-version: 1.13
+authors: [Choukas]
+description: Spigot API for Azuria.
